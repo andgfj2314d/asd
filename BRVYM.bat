@@ -67,7 +67,7 @@ if %Input% equ %password% (
         del "C:\Users\%username%\Desktop\happyking.jpg"
         del "C:\Users\%username%\Desktop\hejewan.jpg"
         del "C:\Users\%username%\Desktop\happyman.bat"
-        shutdown -r -t 5 -c "Unlocked!"
+        shutdown -r -t 5 -c "Unlocking the computer has worked successfully. Please change the wallpaper in Personal Settings."
 
 	goto End
 ) else (
